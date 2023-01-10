@@ -5,7 +5,7 @@
 mkdir -p ~/dolly_ws/src
 cd ~/dolly_ws/src
 git clone https://github.com/tmdahr1245/dolly -b foxy
-mv dolly/my_package ..
+mv dolly/my_package .
 cd ~/dolly_ws
 colcon build --symlink-install 
 source install/setup.bash
