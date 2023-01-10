@@ -1,5 +1,16 @@
 [![Build Status](https://travis-ci.org/chapulina/dolly.svg?branch=master)](https://travis-ci.org/chapulina/dolly)
 
+# My Project Setup
+```bash
+mkdir -p ~/dolly_ws/src
+cd ~/dolly_ws/src
+git clone https://github.com/tmdahr1245/dolly -b foxy
+mv dolly/my_package ..
+cd ~/dolly_ws
+colcon build --symlink-install 
+source install/setup.bash
+```
+
 # Dolly the robot
 
 _It's a sheep, it's a dolly, it's a following robot. Born to be cloned._
