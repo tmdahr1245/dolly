@@ -2,6 +2,7 @@
 
 # My Project Setup
 ```bash
+# setup
 mkdir -p ~/dolly_ws/src
 cd ~/dolly_ws/src
 git clone https://github.com/tmdahr1245/dolly -b foxy
@@ -9,6 +10,17 @@ mv dolly/my_package .
 cd ~/dolly_ws
 colcon build --symlink-install 
 source install/setup.bash
+
+# terminal 1
+ros2 launch my_package dolly.launch.py
+
+# terminal 2
+ros2 launch my_package obstacle_avoidance.launch.py
+ros2 launch my_package reading_laser.launch.py
+ros2 run my_package moving_robot
+
+# terminal 3
+rviz2 -d ~/dolly_ws/src/dolly/dolly_gazebo/rviz/dolly_gazebo.rviz
 ```
 
 # Dolly the robot
